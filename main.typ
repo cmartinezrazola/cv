@@ -1,12 +1,7 @@
 #import "template.typ": cv-template
+#import "private.typ": personal_info
 
-#show: doc => cv-template(
-  name: "Cesar Martinez",
-  role: "Industrial Engineer | CAE & Cloud Infrastructure",
-  email: "your-email@domain.com",
-  github: "cmartinezrazola",
-  doc,
-)
+#show: cv-template.with(..personal_info)
 
 = Professional Experience
 
