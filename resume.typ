@@ -3,8 +3,15 @@
 #show: cv-template.with(
   name: "Cesar Martinez Razola",
   role: "Senior CAE & Simulation Engineer | Cloud & Python",
+  address: "Myaddressstr. xx, yyyy München",
+  phone: "+49 xxx yyy zzz kk",
+  birthdate: "XX.XX.XXXX", 
+  nationality: "spanisch",
+  marital-status: "xxxx, yyyy",
   email: "tu.email@dominio.com",
   github: "cmartinezrazola",
+  linkedin: "cesar-martinez-razola-50b47b12a",
+  xing: "Cesar_Martinez45",
   photo: "assets/bewerbungsfoto.jpg",
 )
 

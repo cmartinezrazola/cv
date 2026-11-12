@@ -2,7 +2,14 @@
   name: "",
   role: "",
   email: "",
+  phone: "",
+  address: "",
+  birthdate: "",
+  nationality: "",
+  marital-status: "",
   github: "",
+  linkedin: "",
+  xing: "",
   photo: none,
   body,
 ) = {
@@ -26,7 +33,22 @@
     text(size: 11pt, weight: "medium", fill: rgb("#444444"))[#role]
     v(6pt)
     text(size: 9pt, fill: rgb("#555555"))[
-      #email #h(8pt) | #h(8pt) #link("https://github.com/" + github)[github.com/#github]
+      #address #h(6pt) | #h(6pt) #phone \
+      #if birthdate != "" [Geburtsdatum: #birthdate ]
+      #if nationality != "" [ #h(6pt) | #h(6pt) #nationality ]
+      #if marital-status != "" [ #h(6pt) | #h(6pt) #marital-status ]
+      \
+      #v(3pt)
+      #link("mailto:" + email)[#email]
+      #if github != "" [
+        #h(6pt) | #h(6pt) #link("https://github.com/" + github)[#underline[GitHub]]
+      ]
+      #if linkedin != "" [
+        #h(6pt) | #h(6pt) #link("https://linkedin.com/in/" + linkedin)[#underline[LinkedIn]]
+      ]
+      #if xing != "" [
+        #h(6pt) | #h(6pt) #link("https://xing.com/profile/" + xing)[#underline[Xing]]
+      ]
     ]
   }
 
@@ -39,8 +61,8 @@
       header_info,
       // Circular crop with subtle executive border
       box(
-        width: 2.6cm,
-        height: 2.6cm,
+        width: 4.0cm,
+        height: 4.0cm,
         radius: 50%,
         clip: true,
         stroke: 0.5pt + rgb("#cccccc"),
