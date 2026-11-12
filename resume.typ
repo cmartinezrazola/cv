@@ -5,6 +5,7 @@
   role: "Industrial Engineer | CAE & Cloud Infrastructure",
   email: "your-email@domain.com",
   github: "cmartinezrazola",
+  photo: "assets/bewerbungsfoto.jpg",
   doc,
 )
 
